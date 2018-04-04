@@ -20,8 +20,8 @@ notebooks there.
 
 ## Contents
 
-### [Basic_Analaysis/Basic analysis.ipynb](Basic_Analysis/html/Basic analysis.html) ([answers](Basic_Analysis/html/answers/Basic analysis.html))
+### [Basic_Analaysis/Basic analysis.ipynb](Basic_Analysis/html/Basic_analysis.html) ([answers](Basic_Analysis/html/answers/Basic_analysis.html))
 
 Something
 
-[download](Basic_Analysis/Basic analysis.ipynb) | [download answers](Basic_Analysis/answers/Basic analysis.ipynb)
+[download](Basic_Analysis/Basic_analysis.ipynb) | [download answers](Basic_Analysis/answers/Basic_analysis.ipynb)

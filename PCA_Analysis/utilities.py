@@ -4,30 +4,33 @@ import numpy as np
 import mdtraj as mdt
 from matplotlib import pyplot as plt
 
-def plot_rmsd(trajdata, datanames):
+def plot_rmsd(cofasu, datanames):
     """
-    This function takes a list of trajectories and a list of data names and produces an rmsd plot.
+    This function takes a cofasu and a list of data names and produces an rmsd plot.
     
     """
+    cofasu.align() # least squares fits each snapshot to the first.
+    frames_per_set = len(cofasu) // len(datanames) # we assume each trajectory file is the same length.
     for i in range(len(datanames)):
-        rmsd = mdt.rmsd(trajdata[i], trajdata[i][0]) # RMSD from the first snapshot
+        # The next two lines do the rmsd calculation:
+        diff = cofasu[i * frames_per_set : (i + 1) * frames_per_set] - cofasu[0]
+        rmsd = np.sqrt((diff * diff).sum(axis=2).mean(axis=1))
         plt.plot(rmsd, label=datanames[i]) # plot the line for this dataset on the graph.
     plt.xlabel('Frame number')
     plt.ylabel('RMSD (Ang.)')
     plt.legend(loc='lower right')
-    plt.legend(loc='lower right')
 
-def plot_rmsf(traj):
+def plot_rmsf(cofasu):
     """
-    Plots the root mean square fluctuations of the atoms in a trajectory.
+    Plots the root mean square fluctuations of the atoms in a cofasu.
     
     """
-    traj.superpose(traj[0]) # align the snapshots to the first
-    diff = traj.xyz - traj.xyz.mean(axis=0)
+    diff = cofasu[:] - cofasu[:].mean(axis=0)
     rmsf = np.sqrt((diff * diff).sum(axis=2).mean(axis=0))
     plt.xlabel('atom number')
     plt.ylabel('RMSF (Ang.)')
     plt.plot(rmsf)
+    
     
 def plot_pca(pca_model, datanames, highlight=None):
     """

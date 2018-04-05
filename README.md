@@ -11,9 +11,13 @@ Whether you are a user of Amber, Charmm, Gromacs, NAMD or any other MD package, 
 
 ## Training Material
 
-The "setting up" part of the workshop takes the form of an informal lecture with interspersed activities. The "analysis" part of the workshop consists of a series of Jupyter notebooks. These are available
-below, and can be run using the 
-<a href="https://ccpbiosim.github.io/workshop/events/bristol2018/server.html" target="_blank">workshop jupyter server</a>.
-
+The "setting up" part of the workshop takes the form of an informal lecture with interspersed activities. The "analysis" part of the workshop consists of a series of Jupyter notebooks. These can be run using the 
+<a href="https://ccpbiosim.github.io/workshop/events/bristol2018/server.html" target="_blank">workshop jupyter server</a>. 
 Once you have started the server, navigate to the `md_workshop` directory and you will find the
 notebooks there.
+
+If you want to take a copy for your own use back home, the simplest approach is to clone this repository:
+```
+git clone https://github.com/CCPBioSim/md_workshop.git
+```
+

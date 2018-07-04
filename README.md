@@ -13,9 +13,10 @@ Whether you are a user of Amber, Charmm, Gromacs, NAMD or any other MD package, 
 
 The "setting up" part of the workshop takes the form of an informal lecture with interspersed activities. The "analysis" part of the workshop consists of a series of Jupyter notebooks:
 
-1. **Basic Analysis Methods**: An introduction to interactive MD data analysis with Jupyter notebooks and MDTraj.
-2. **PCA Methods for Trajectory Analysis**: An introduction to the use of Principal Component Analysis methods for the analysis of sampling and convergence of MD simulations.
-3. **Basic Statistics for Trajectory Analysis**: An introduction to the use of statistical methods to assess the significance of data extracted from MD simulations.
+1. **Basic Analysis**: An introduction to interactive MD data analysis with Jupyter notebooks and MDTraj.
+2. **PCA Analysis**: An introduction to the use of Principal Component Analysis methods for the analysis of sampling and convergence of MD simulations.
+3. **Statistical Analysis**: An introduction to the use of statistical methods to assess the significance of data extracted from MD simulations.
+4. **Ubiquitin Analysis**: Application of some of the methods in the other notebooks to the analysis of data from an MD simulation of ubiquitin.
 
 These can be run using the 
 <a href="https://ccpbiosim.github.io/workshop/events/bristol2018/server.html" target="_blank">workshop jupyter server</a>. 

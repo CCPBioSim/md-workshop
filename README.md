@@ -11,7 +11,9 @@ Whether you are a user of Amber, Charmm, Gromacs, NAMD or any other MD package, 
 
 ## Training Material
 
-The "setting up" part of the workshop takes the form of an informal lecture with interspersed activities. The "analysis" part of the workshop consists of a series of Jupyter notebooks:
+The "setting up" part of the workshop takes the form of an informal lecture with interspersed activities. You can find a copy of the notes for this presentation, and data files for the activities, in the 'Presentation' folder.
+
+The "analysis" part of the workshop consists of a series of Jupyter notebooks:
 
 1. **Basic Analysis**: An introduction to interactive MD data analysis with Jupyter notebooks and MDTraj.
 2. **PCA Analysis**: An introduction to the use of Principal Component Analysis methods for the analysis of sampling and convergence of MD simulations.

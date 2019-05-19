@@ -27,6 +27,8 @@ RUN pip install --user pypcazip
 RUN pip install --user ipywidgets
 RUN pip install --user nglview
 RUN pip install --user xbowflow
+RUN pip install --user pinda
+RUN pinda install propka 3.1.0
 
 # Initialise NGLView.
 RUN jupyter-nbextension install nglview --py --sys-prefix && \
@@ -36,26 +38,6 @@ RUN jupyter-nbextension install nglview --py --sys-prefix && \
 # breaks the JupyterHub kernel (even though two versions are installed
 # in conda!).
 RUN pip uninstall -y tornado
-
-# Install procheck
-ADD --chown=jovyan:100 procheck $HOME/.procheck
-ENV PRODIR $HOME/.procheck
-
-RUN cd ${PRODIR} && make
-RUN echo 'set prodir = $HOME/.procheck' > $HOME/.cshrc && \
-    echo 'setenv prodir $HOME/.procheck' >> $HOME/.cshrc && \
-    echo 'alias procheck ${prodir}/procheck.scr' >> $HOME/.cshrc && \
-    echo 'alias procheck_comp ${prodir}/procheck_comp.scr' >> $HOME/.cshrc && \
-    echo 'alias procheck_nmr ${prodir}/procheck_nmr.scr' >> $HOME/.cshrc && \
-    echo 'alias proplot ${prodir}/proplot.scr' >> $HOME/.cshrc && \
-    echo 'alias proplot_comp ${prodir}/proplot_comp.scr' >> $HOME/.cshrc && \
-    echo 'alias proplot_nmr ${prodir}/proplot_nmr.scr' >> $HOME/.cshrc && \
-    echo 'alias gfac2pdb ${prodir}/gfac2pdb.scr' >> $HOME/.cshrc && \
-    echo 'alias viol2pdb ${prodir}/viol2pdb.scr' >> $HOME/.cshrc && \
-    echo 'alias wirplot ${prodir}/wirplot.scr' >> $HOME/.cshrc
-
-RUN ln -s $HOME/.procheck/procheck.scr $HOME/.local/bin/procheck
-RUN ln -s $HOME/.procheck/gfac2pdb.scr $HOME/.local/bin/gfac2pdb
 
 # Add all of the workshop files to the home directory
 ADD --chown=jovyan:100 *.ipynb $HOME/

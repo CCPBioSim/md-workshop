@@ -15,7 +15,7 @@ This workshop consists of a series of Jupyter notebooks:
 6. **Procheck  Analysis**: A slightly more advanced notebook that demonstartes how you can automate the Procheck analysis of a multi-model PDB file of an NMR-derived protein structure.
 
 These can be run using the 
-<a href="https://ccpbiosim.github.io/workshop/events/leeds2019/server.html" target="_blank">workshop jupyter server</a>. 
+<a href="http://132.145.243.165" target="_blank">CCPBioSim workshop server</a>. 
 Once you have started the server, navigate to the `md_workshop` directory and you will find the
 notebooks there.
 
